@@ -6,7 +6,7 @@ const { Pool } = pg;
 
 const pool = new Pool({
   user: process.env.DB_USER,
-  host: 'db', // important for Docker
+  host: process.env.DB_HOST,  // important for Docker
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: 5432
