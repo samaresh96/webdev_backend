@@ -5,6 +5,9 @@ import formRoutes from './routes/formRoutes.js';
 const app = express();
 
 app.use(cors());
+
+app.use(cors({ origin: 'http://65.1.100.7/' })); // replace with your frontend URL
+
 app.use(express.json());
 
 app.use('/api', formRoutes);
